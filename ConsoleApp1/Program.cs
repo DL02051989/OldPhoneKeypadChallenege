@@ -72,21 +72,21 @@ public class OldPhoneKeyPad
     
     private static void AddCharacter(char key, int Count, StringBuilder output)
     {
-        int keyIndex = key - '0';  // Convert the key to its index in the array
-        if (keyIndex < 2 || keyIndex > 9) return; // Invalid key press (ignoring 0 and 1)
+        int keyIndex = key - '0';  // Convert the key to its index in array
+        if (keyIndex < 2 || keyIndex > 9) return; // Invalid key press (reject 0 and 1)
 
-        string keyGroup = Keypad[keyIndex];
-        int characterIndex = (Count - 1) % keyGroup.Length;  
-        output.Append(keyGroup[characterIndex]);
+        string Group = Keypad[keyIndex];
+        int characterIndex = (Count - 1) % Group.Length;  
+        output.Append(Group[characterIndex]);
     }
 
     public static void Main(string[] args)
     {
-        // Test the OldPhonePad method with example inputs
+        // OldPhonePad method with example inputs as mentioned in casestudy
         Console.WriteLine(OldPhoneKeyPadMethod("33#"));             //Output: E
         Console.WriteLine(OldPhoneKeyPadMethod("227*#"));           //Output: B
         Console.WriteLine(OldPhoneKeyPadMethod("4433555 555666#")); //Output: HELLO
-        Console.WriteLine(OldPhoneKeyPadMethod("3 33 33744455255525559266444")); //Output: DEEPIKALALWANI
+        Console.WriteLine(OldPhoneKeyPadMethod("3 33 33744455255525559266444")); //Output: DEEPIKALALWANI "Testing my name"
         Console.WriteLine(OldPhoneKeyPadMethod("8 88777444666*664#")); //Output: TURIONG
     }
 }
