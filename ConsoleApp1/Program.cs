@@ -88,5 +88,23 @@ public class OldPhoneKeyPad
         Console.WriteLine(OldPhoneKeyPadMethod("4433555 555666#")); //Output: HELLO
         Console.WriteLine(OldPhoneKeyPadMethod("3 33 33744455255525559266444")); //Output: DEEPIKALALWANI "Testing my name"
         Console.WriteLine(OldPhoneKeyPadMethod("8 88777444666*664#")); //Output: TURIONG
+
+         // Test Case 1: Single Key Press
+        Console.WriteLine(OldPhoneKeyPadMethod("5#"));             //Output: J
+
+        // Test Case 2: Multiple Press on the Same Key
+        Console.WriteLine(OldPhoneKeyPadMethod("55#"));             //Output: K
+
+         // Test Case 3: Multiple Press on the Same Key for complete input
+        Console.WriteLine(OldPhoneKeyPadMethod("555#"));             //Output: L
+
+        // Test Case 4: Multiple Consecutive Key 
+        Console.WriteLine(OldPhoneKeyPadMethod("45#"));             //Output: GJ
+
+        // Test Case 5: Multiple Keys with Repeated Press
+        Console.WriteLine(OldPhoneKeyPadMethod("22 33 444#"));       //Output: BDF
+
+        // Test Case 6:  Special Character
+        Console.WriteLine(OldPhoneKeyPadMethod("#"));                //Output: empty
     }
 }
