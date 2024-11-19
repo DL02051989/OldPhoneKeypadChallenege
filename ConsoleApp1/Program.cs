@@ -102,7 +102,7 @@ public class OldPhoneKeyPad
         Console.WriteLine(OldPhoneKeyPadMethod("45#"));             //Output: GJ
 
         // Test Case 5: Multiple Keys with Repeated Press
-        Console.WriteLine(OldPhoneKeyPadMethod("22 33 444#"));       //Output: BDF
+        Console.WriteLine(OldPhoneKeyPadMethod("22 33 444#"));       //Output: BEI
 
         // Test Case 6:  Special Character
         Console.WriteLine(OldPhoneKeyPadMethod("#"));                //Output: empty
